@@ -4,6 +4,7 @@ from flask import (
 )
 
 from datetime import datetime
+from app.database import user
 
 
 app = Flask(__name__)
@@ -30,7 +31,7 @@ def get_version():
     return out
 
 
-@app.get("/users")
+@app.get("/users")  # plural nouns
 def get_all_users():
     user_list = user.scan()
     out = {

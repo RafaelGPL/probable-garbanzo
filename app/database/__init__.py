@@ -2,7 +2,7 @@ from flask import g
 import sqlite3
 
 
-DATABASE_URL = "user_crud.db"
+DATABASE_URL = "user.db"
 
 
 def get_db():
