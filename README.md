@@ -36,3 +36,13 @@ To run the development server:
 `$> python3 utils/delete_user.py`
 
 Note: Follow the prompts, these are interactive scripts.
+
+## Testing scan
+
+You should be able to perform GET requests through a browser but a helpful snippet (if you have jq installed) is:
+
+`$> curl http://127.0.0.1:5000/users | jq`
+
+Which should show you something like this:
+
+![Curl Example](curl_example.png)
