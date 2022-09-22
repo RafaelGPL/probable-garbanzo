@@ -54,7 +54,7 @@ def select_by_id(pk):
     return output_formatter(results)
 
 
-def update(pk, user_data):
+def update(user_data, pk):
     value_tuple = (
         user_data.get("first_name"),
         user_data.get("last_name"),
@@ -74,7 +74,7 @@ def update(pk, user_data):
     cursor.close()
 
 
-def deactivate_user(pk):
+def deactivate(pk):
     cursor = get_db()
     cursor.execute("UPDATE user SET active=0 WHERE id=?", (pk, ))
     cursor.commit()
